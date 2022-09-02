@@ -5,6 +5,7 @@
     "main": "src/index.jsx",
     "author": "WandersonSantos",
     "homepage": ".",
+    "private": true,
     "license": "MIT",
     "scripts": {
         "start": "cp .env.dev .env && cross-env NODE_ENV=development webpack serve",
