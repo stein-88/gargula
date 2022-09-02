@@ -8,7 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const manifest = require(path.join(__dirname, 'public/manifest.json'))
 const SOURCE_DIR = path.join(__dirname, 'src')
-const OUTPUT_DIR = path.resolve(__dirname, 'build')
+const OUTPUT_DIR = path.join(__dirname, 'build')
 const { env } = process
 const newEnv = dotenv.config().parsed || {}
 const envKeys = Object.fromEntries(Object.entries(newEnv).map(([key, val]) => [`process.env.${key}`, JSON.stringify(val)]))
@@ -21,7 +21,7 @@ const common = {
     output: {
         path: OUTPUT_DIR,
         publicPath: 'auto',
-        filename: 'bundle-[fullhash].js',
+        filename: 'scripts/bundle-[fullhash].js',
         clean: true
     },
     resolve: {
