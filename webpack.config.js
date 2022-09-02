@@ -19,11 +19,7 @@ const common = {
         index: ['babel-polyfill', './src/index.jsx']
     },
     output: {
-        filename: "[name].[contenthash].js",
-        pathinfo: true,
-        chunkFilename: "[name].[contenthash:8].chunk.js",
-        publicPath: "/assets/",
-        globalObject: "this",
+        publicPath: "auto",
         path: OUTPUT_DIR,
         filename: 'scripts/bundle-[fullhash].js',
         clean: true
