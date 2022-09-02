@@ -20,7 +20,7 @@ const common = {
     },
     output: {
         path: OUTPUT_DIR,
-        publicPath: 'auto',
+        publicPath: 'gargula',
         filename: 'scripts/bundle-[fullhash].js'
     },
     resolve: {
