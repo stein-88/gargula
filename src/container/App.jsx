@@ -4,15 +4,19 @@ import {
 } from 'react-router-dom'
 import TicTacToe from '@components/TicTacToe'
 import Footer from '@components/Footer'
+import { HOMEPATH } from '@constants/config'
 
-const App = () => (
-	<BrowserRouter>
-		<Routes>
-			<Route element={<TicTacToe />} path="/" />
-			<Route element={<Navigate replace to="/" />} path="*" />
-		</Routes>
-		<Footer />
-	</BrowserRouter>
-)
+const App = () => {
+	const finalPath = HOMEPATH || '/'
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route element={<TicTacToe />} path={finalPath} />
+				<Route element={<Navigate replace to={finalPath} />} path="*" />
+			</Routes>
+			<Footer />
+		</BrowserRouter>
+	)
+}
 
 export default App

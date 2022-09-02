@@ -5,6 +5,7 @@ export const PAGE_NUM = 'PAGE_NUM';
 export const DUMMY = 'DUMMY';
 export const ATIE = 'Tie';
 export const { TITLE } = process.env
+export const { HOMEPATH } = process.env
 
 export const WINNING_COMBINATIONS = [
   [0, 1, 2],
